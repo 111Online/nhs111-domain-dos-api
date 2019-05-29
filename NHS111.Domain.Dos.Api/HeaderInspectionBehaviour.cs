@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
-using System.Threading.Tasks;
 
 namespace NHS111.Domain.Dos.Api
 {
@@ -25,7 +21,8 @@ namespace NHS111.Domain.Dos.Api
 
     public class HeaderInspector : IClientMessageInspector
     {
-        public void AfterReceiveReply(ref Message reply, object correlationState) { }
+        public void AfterReceiveReply(ref Message reply, object correlationState){
+        }
 
         public object BeforeSendRequest(ref Message request, IClientChannel channel)
         {

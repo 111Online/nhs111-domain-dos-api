@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Specialized;
-using System.Net.Http;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
-using System.Web;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Protocols;
 using PathwayService;
 
 namespace NHS111.Domain.Dos.Api
@@ -31,7 +27,7 @@ namespace NHS111.Domain.Dos.Api
                 client = new PathWayServiceSoapClient();
             else
             {
-                var endpointUrl = endpoint == "Live" ? _configuration.GetSection("dos-live-endpoint").Value : _configuration.GetSection("dos-uat-endpoint").Value;
+                var endpointUrl = endpoint == "Live" ? _configuration["dos-live-endpoint"] : _configuration["dos-uat-endpoint"];
                 var uri = new Uri(endpointUrl);
                 var binding = new CustomBinding();
                 var httpsBindingElement = new HttpsTransportBindingElement
