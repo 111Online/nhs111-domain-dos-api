@@ -28,18 +28,22 @@ namespace NHS111.Domain.Dos.Api.Functional.Test
 
         private static void AssertValidCheckCapacitySummaryResponseSchema(string result)
         {
-            Assert.IsTrue(result.Contains("\"Question"));
-            Assert.IsTrue(result.Contains("\"order"));
-            Assert.IsTrue(result.Contains("\"topic"));
+            Assert.IsTrue(result.Contains("\"serviceType\"{\"id"));
+            Assert.IsTrue(result.Contains("\"serviceType\"{\"name"));
             Assert.IsTrue(result.Contains("\"id"));
-            Assert.IsTrue(result.Contains("\"questionNo"));
-            Assert.IsTrue(result.Contains("\"title"));
-            Assert.IsTrue(result.Contains("\"jtbs"));
-            Assert.IsTrue(result.Contains("\"jtbsText"));
-            Assert.IsTrue(result.Contains("\"Answers"));
-            Assert.IsTrue(result.Contains("\"symptomDiscriminator"));
-            Assert.IsTrue(result.Contains("\"Labels"));
-            Assert.IsTrue(result.Contains("\"State"));
+            Assert.IsTrue(result.Contains("\"capacity"));
+            Assert.IsTrue(result.Contains("\"name"));
+            Assert.IsTrue(result.Contains("\"contactDetails"));
+            Assert.IsTrue(result.Contains("\"address"));
+            Assert.IsTrue(result.Contains("\"postCode"));
+            Assert.IsTrue(result.Contains("\"northings"));
+            Assert.IsTrue(result.Contains("\"eastings"));
+            Assert.IsTrue(result.Contains("\"url"));
+            Assert.IsTrue(result.Contains("\"notes"));
+            Assert.IsTrue(result.Contains("\"openAllHours"));
+            Assert.IsTrue(result.Contains("\"rotaSessions"));
+            Assert.IsTrue(result.Contains("\"serviceType"));
+            Assert.IsTrue(result.Contains("\"odsCode"));
         }
 
         private static void AssertValidCheckServiceDetailsByIdResponseSchema(string result)
