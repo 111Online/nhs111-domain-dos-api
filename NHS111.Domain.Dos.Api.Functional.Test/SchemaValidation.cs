@@ -22,7 +22,7 @@ namespace NHS111.Domain.Dos.Api.Functional.Test
                     AssertValidCheckServiceDetailsByIdResponseSchema(result);
                     break;
                 default:
-                    throw new InvalidEnumArgumentException(string.Format("{0}{1}{2}", "ResponseSchemaType of ", schemaType.ToString(), "is unsupported"));
+                    throw new InvalidEnumArgumentException($"ResponseSchemaType of {schemaType.ToString()} is unsupported");
             }
         }
 
