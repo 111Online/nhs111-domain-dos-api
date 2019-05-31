@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using System.ServiceModel;
+using AutoMapper;
+using DirectoryOfServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +28,6 @@ namespace NHS111.Domain.Dos.Api
                 mc.AddProfile(new MappingProfile());
             }).CreateMapper();
             services.AddSingleton(mapper);
-
             services.AddSingleton<IPathwayServiceSoapFactory>(new PathwayServiceSoapFactory(Configuration));
             services.AddSingleton<IMonitorService>(new MonitorService(new PathwayServiceSoapFactory(Configuration), Configuration));
 

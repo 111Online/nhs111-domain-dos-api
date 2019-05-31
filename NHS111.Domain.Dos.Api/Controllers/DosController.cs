@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
 using AutoMapper;
+using DirectoryOfServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using NHS111.Domain.Dos.Api.Models.Request;
-using PathwayService;
+using NHS111.Domain.Dos.Api.Models.Response;
 
 namespace NHS111.Domain.Dos.Api.Controllers
 {
@@ -22,11 +23,12 @@ namespace NHS111.Domain.Dos.Api.Controllers
 
         [HttpPost]
         [Route("CheckCapacitySummary")]
-        public async Task<ActionResult<CheckCapacitySummaryResponse>> CheckCapacitySummary([FromBody]DosCheckCapacitySummaryRequest dosRequest, [FromQuery]string endpoint = "")
+        public async Task<ActionResult<DoSCheckCapacitySummaryResponse>> CheckCapacitySummary([FromBody]DosCheckCapacitySummaryRequest dosRequest, [FromQuery]string endpoint = "")
         {
             var client = _pathWayServiceFactory.Create(endpoint);
             var checkCapacitysummaryRequest = _mapper.Map<CheckCapacitySummaryRequest>(dosRequest);
-            return await client.CheckCapacitySummaryAsync(checkCapacitysummaryRequest);
+            var checkCapacitySummaryResponse = await client.CheckCapacitySummaryAsync(checkCapacitysummaryRequest);
+            return _mapper.Map<DoSCheckCapacitySummaryResponse>(checkCapacitySummaryResponse);
         }
 
         [HttpPost]

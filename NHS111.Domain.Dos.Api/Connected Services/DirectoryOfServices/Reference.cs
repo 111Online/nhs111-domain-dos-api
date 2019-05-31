@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PathwayService
+namespace DirectoryOfServices
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", ConfigurationName="PathwayService.PathWayServiceSoap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", ConfigurationName="DirectoryOfServices.PathWayServiceSoap")]
     public interface PathWayServiceSoap
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="https://nww.pathwaysdos.nhs.uk/app/api/webservices/ServiceDetailsById", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<PathwayService.ServiceDetailsByIdResponse> ServiceDetailsByIdAsync(PathwayService.ServiceDetailsByIdRequest request);
+        System.Threading.Tasks.Task<DirectoryOfServices.ServiceDetailsByIdResponse> ServiceDetailsByIdAsync(DirectoryOfServices.ServiceDetailsByIdRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="https://nww.pathwaysdos.nhs.uk/app/api/webservices/GetHospitalScores", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<PathwayService.GetHospitalScoresResponse> GetHospitalScoresAsync(PathwayService.GetHospitalScoresRequest request);
+        System.Threading.Tasks.Task<DirectoryOfServices.GetHospitalScoresResponse> GetHospitalScoresAsync(DirectoryOfServices.GetHospitalScoresRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="https://nww.pathwaysdos.nhs.uk/app/api/webservices/CheckCapacitySummary", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<PathwayService.CheckCapacitySummaryResponse> CheckCapacitySummaryAsync(PathwayService.CheckCapacitySummaryRequest request);
+        System.Threading.Tasks.Task<DirectoryOfServices.CheckCapacitySummaryResponse> CheckCapacitySummaryAsync(DirectoryOfServices.CheckCapacitySummaryRequest request);
     }
     
     /// <remarks/>
@@ -1426,7 +1426,7 @@ namespace PathwayService
         public string serviceVersion;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=0)]
-        public PathwayService.UserInfo userInfo;
+        public DirectoryOfServices.UserInfo userInfo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=1)]
         public string serviceId;
@@ -1435,7 +1435,7 @@ namespace PathwayService
         {
         }
         
-        public ServiceDetailsByIdRequest(string serviceVersion, PathwayService.UserInfo userInfo, string serviceId)
+        public ServiceDetailsByIdRequest(string serviceVersion, DirectoryOfServices.UserInfo userInfo, string serviceId)
         {
             this.serviceVersion = serviceVersion;
             this.userInfo = userInfo;
@@ -1452,13 +1452,13 @@ namespace PathwayService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("service")]
-        public PathwayService.ServiceDetail[] services;
+        public DirectoryOfServices.ServiceDetail[] services;
         
         public ServiceDetailsByIdResponse()
         {
         }
         
-        public ServiceDetailsByIdResponse(PathwayService.ServiceDetail[] services)
+        public ServiceDetailsByIdResponse(DirectoryOfServices.ServiceDetail[] services)
         {
             this.services = services;
         }
@@ -1475,13 +1475,13 @@ namespace PathwayService
         public string serviceVersion;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=0)]
-        public PathwayService.UserInfo userInfo;
+        public DirectoryOfServices.UserInfo userInfo;
         
         public GetHospitalScoresRequest()
         {
         }
         
-        public GetHospitalScoresRequest(string serviceVersion, PathwayService.UserInfo userInfo)
+        public GetHospitalScoresRequest(string serviceVersion, DirectoryOfServices.UserInfo userInfo)
         {
             this.serviceVersion = serviceVersion;
             this.userInfo = userInfo;
@@ -1496,13 +1496,13 @@ namespace PathwayService
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=0)]
-        public PathwayService.Hospital[] GetHospitalScoresResult;
+        public DirectoryOfServices.Hospital[] GetHospitalScoresResult;
         
         public GetHospitalScoresResponse()
         {
         }
         
-        public GetHospitalScoresResponse(PathwayService.Hospital[] GetHospitalScoresResult)
+        public GetHospitalScoresResponse(DirectoryOfServices.Hospital[] GetHospitalScoresResult)
         {
             this.GetHospitalScoresResult = GetHospitalScoresResult;
         }
@@ -1544,16 +1544,16 @@ namespace PathwayService
         public string serviceVersion;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=0)]
-        public PathwayService.UserInfo userInfo;
+        public DirectoryOfServices.UserInfo userInfo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=1)]
-        public PathwayService.Case c;
+        public DirectoryOfServices.Case c;
         
         public CheckCapacitySummaryRequest()
         {
         }
         
-        public CheckCapacitySummaryRequest(string serviceVersion, PathwayService.UserInfo userInfo, PathwayService.Case c)
+        public CheckCapacitySummaryRequest(string serviceVersion, DirectoryOfServices.UserInfo userInfo, DirectoryOfServices.Case c)
         {
             this.serviceVersion = serviceVersion;
             this.userInfo = userInfo;
@@ -1583,17 +1583,17 @@ namespace PathwayService
         public int SearchDistance;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=5)]
-        public PathwayService.DistanceSource SearchDistanceUsedSource;
+        public DirectoryOfServices.DistanceSource SearchDistanceUsedSource;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://nww.pathwaysdos.nhs.uk/app/api/webservices", Order=6)]
         [System.Xml.Serialization.XmlArrayItemAttribute("serviceCareSummaryDestination")]
-        public PathwayService.ServiceCareSummaryDestination[] CheckCapacitySummaryResult;
+        public DirectoryOfServices.ServiceCareSummaryDestination[] CheckCapacitySummaryResult;
         
         public CheckCapacitySummaryResponse()
         {
         }
         
-        public CheckCapacitySummaryResponse(string TransactionId, string RequestedAtDateTime, string SearchDateTime, float CalculatedAgeInDays, int SearchDistance, PathwayService.DistanceSource SearchDistanceUsedSource, PathwayService.ServiceCareSummaryDestination[] CheckCapacitySummaryResult)
+        public CheckCapacitySummaryResponse(string TransactionId, string RequestedAtDateTime, string SearchDateTime, float CalculatedAgeInDays, int SearchDistance, DirectoryOfServices.DistanceSource SearchDistanceUsedSource, DirectoryOfServices.ServiceCareSummaryDestination[] CheckCapacitySummaryResult)
         {
             this.TransactionId = TransactionId;
             this.RequestedAtDateTime = RequestedAtDateTime;
@@ -1606,13 +1606,13 @@ namespace PathwayService
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    public interface PathWayServiceSoapChannel : PathwayService.PathWayServiceSoap, System.ServiceModel.IClientChannel
+    public interface PathWayServiceSoapChannel : DirectoryOfServices.PathWayServiceSoap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    public partial class PathWayServiceSoapClient : System.ServiceModel.ClientBase<PathwayService.PathWayServiceSoap>, PathwayService.PathWayServiceSoap
+    public partial class PathWayServiceSoapClient : System.ServiceModel.ClientBase<DirectoryOfServices.PathWayServiceSoap>, DirectoryOfServices.PathWayServiceSoap
     {
         
     /// <summary>
@@ -1656,35 +1656,35 @@ namespace PathwayService
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PathwayService.ServiceDetailsByIdResponse> PathwayService.PathWayServiceSoap.ServiceDetailsByIdAsync(PathwayService.ServiceDetailsByIdRequest request)
+        System.Threading.Tasks.Task<DirectoryOfServices.ServiceDetailsByIdResponse> DirectoryOfServices.PathWayServiceSoap.ServiceDetailsByIdAsync(DirectoryOfServices.ServiceDetailsByIdRequest request)
         {
             return base.Channel.ServiceDetailsByIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<PathwayService.ServiceDetailsByIdResponse> ServiceDetailsByIdAsync(string serviceVersion, PathwayService.UserInfo userInfo, string serviceId)
+        public System.Threading.Tasks.Task<DirectoryOfServices.ServiceDetailsByIdResponse> ServiceDetailsByIdAsync(string serviceVersion, DirectoryOfServices.UserInfo userInfo, string serviceId)
         {
-            PathwayService.ServiceDetailsByIdRequest inValue = new PathwayService.ServiceDetailsByIdRequest();
+            DirectoryOfServices.ServiceDetailsByIdRequest inValue = new DirectoryOfServices.ServiceDetailsByIdRequest();
             inValue.serviceVersion = serviceVersion;
             inValue.userInfo = userInfo;
             inValue.serviceId = serviceId;
-            return ((PathwayService.PathWayServiceSoap)(this)).ServiceDetailsByIdAsync(inValue);
+            return ((DirectoryOfServices.PathWayServiceSoap)(this)).ServiceDetailsByIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PathwayService.GetHospitalScoresResponse> PathwayService.PathWayServiceSoap.GetHospitalScoresAsync(PathwayService.GetHospitalScoresRequest request)
+        System.Threading.Tasks.Task<DirectoryOfServices.GetHospitalScoresResponse> DirectoryOfServices.PathWayServiceSoap.GetHospitalScoresAsync(DirectoryOfServices.GetHospitalScoresRequest request)
         {
             return base.Channel.GetHospitalScoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<PathwayService.GetHospitalScoresResponse> GetHospitalScoresAsync(string serviceVersion, PathwayService.UserInfo userInfo)
+        public System.Threading.Tasks.Task<DirectoryOfServices.GetHospitalScoresResponse> GetHospitalScoresAsync(string serviceVersion, DirectoryOfServices.UserInfo userInfo)
         {
-            PathwayService.GetHospitalScoresRequest inValue = new PathwayService.GetHospitalScoresRequest();
+            DirectoryOfServices.GetHospitalScoresRequest inValue = new DirectoryOfServices.GetHospitalScoresRequest();
             inValue.serviceVersion = serviceVersion;
             inValue.userInfo = userInfo;
-            return ((PathwayService.PathWayServiceSoap)(this)).GetHospitalScoresAsync(inValue);
+            return ((DirectoryOfServices.PathWayServiceSoap)(this)).GetHospitalScoresAsync(inValue);
         }
         
-        public System.Threading.Tasks.Task<PathwayService.CheckCapacitySummaryResponse> CheckCapacitySummaryAsync(PathwayService.CheckCapacitySummaryRequest request)
+        public System.Threading.Tasks.Task<DirectoryOfServices.CheckCapacitySummaryResponse> CheckCapacitySummaryAsync(DirectoryOfServices.CheckCapacitySummaryRequest request)
         {
             return base.Channel.CheckCapacitySummaryAsync(request);
         }

@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "Uri": "https://www.pathwaysdos.nhs.uk/app/api/webservices",
-    "Namespace": "PathwayService",
+    "Namespace": "DirectoryOfServices",
     "SelectedAccessLevelForGeneratedClass": "Public",
     "GenerateMessageContract": false,
     "ReuseTypesinReferencedAssemblies": true,
@@ -21,7 +21,7 @@
     },
     "CheckedReferencedAssemblies": [],
     "InstanceId": null,
-    "Name": "PathwayService",
+    "Name": "DirectoryOfServices",
     "Metadata": {}
   }
 }

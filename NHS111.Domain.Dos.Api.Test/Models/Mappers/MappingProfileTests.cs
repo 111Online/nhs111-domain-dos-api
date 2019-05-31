@@ -1,8 +1,10 @@
-﻿using AutoMapper;
+﻿using System.Linq;
+using AutoMapper;
+using DirectoryOfServices;
 using NHS111.Domain.Dos.Api.Models.Mappers;
 using NHS111.Domain.Dos.Api.Models.Request;
+using NHS111.Domain.Dos.Api.Models.Response;
 using NUnit.Framework;
-using PathwayService;
 using AgeFormatType = NHS111.Domain.Dos.Api.Models.Request.AgeFormatType;
 
 namespace NHS111.Domain.Dos.Api.Test.Models.Mappers
@@ -31,7 +33,7 @@ namespace NHS111.Domain.Dos.Api.Test.Models.Mappers
             Assert.AreEqual("123", result.c.caseId);
             Assert.AreEqual("so302un", result.c.postcode);
             Assert.AreEqual(33, result.c.age);
-            Assert.AreEqual(PathwayService.AgeFormatType.Years, result.c.ageFormat);
+            Assert.AreEqual(DirectoryOfServices.AgeFormatType.Years, result.c.ageFormat);
             Assert.AreEqual("111", result.c.caseRef);
             Assert.AreEqual(1008, result.c.disposition);
             Assert.AreEqual(GenderType.M, result.c.gender);
@@ -52,6 +54,22 @@ namespace NHS111.Domain.Dos.Api.Test.Models.Mappers
             Assert.AreEqual("madeUpUser", result.userInfo.username);
             Assert.AreEqual("madeUpPassword", result.userInfo.password);
             Assert.AreEqual("1.5", result.serviceVersion);
+        }
+
+        [Test]
+        public void FromCheckCapacitySummaryResponseToDoSCheckCapacitySummaryResponse_IsValid()
+        {
+            var checkCapacitySummaryResponse = new CheckCapacitySummaryResponse("1234", "2019-05-29T15:38:36", "2019-05-29T15:38:36", 8035.5f, 30, DistanceSource.National, new ServiceCareSummaryDestination[] { new ServiceCareSummaryDestination() { publicFacingInformation = "some referral text", referralInformation = "some notes about this service" },  });
+
+            var result = Mapper.Map<CheckCapacitySummaryResponse, DoSCheckCapacitySummaryResponse>(checkCapacitySummaryResponse);
+            Assert.AreEqual(checkCapacitySummaryResponse.TransactionId, result.TransactionId);
+            Assert.AreEqual(checkCapacitySummaryResponse.CheckCapacitySummaryResult.First().referralInformation, result.CheckCapacitySummaryResult.First().Notes);
+            Assert.AreEqual(checkCapacitySummaryResponse.CheckCapacitySummaryResult.First().publicFacingInformation, result.CheckCapacitySummaryResult.First().ReferralText);
+        }
+
+        private CheckCapacitySummaryResponse GenerateCheckCapacitySummaryResponseObject()
+        {
+            throw new System.NotImplementedException();
         }
 
         private DosCheckCapacitySummaryRequest GenerateDosCheckCapacitySummaryRequestObject()

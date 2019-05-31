@@ -1,8 +1,8 @@
+using DirectoryOfServices;
 using Microsoft.Extensions.Configuration;
 using NHS111.Domain.Dos.Api.Functional.Test.RestTools;
 using NHS111.Domain.Dos.Api.Models.Request;
 using NUnit.Framework;
-using PathwayService;
 using RestSharp;
 
 namespace NHS111.Domain.Dos.Api.Functional.Test

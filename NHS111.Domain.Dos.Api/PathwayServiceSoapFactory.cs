@@ -2,8 +2,8 @@
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
+using DirectoryOfServices;
 using Microsoft.Extensions.Configuration;
-using PathwayService;
 
 namespace NHS111.Domain.Dos.Api
 {
@@ -24,7 +24,7 @@ namespace NHS111.Domain.Dos.Api
         {
             PathWayServiceSoapClient client;
             if (string.IsNullOrEmpty(endpoint))
-                client = new PathWayServiceSoapClient();
+                client = new PathWayServiceSoapClient(PathWayServiceSoapClient.EndpointConfiguration.PathWayServiceSoap12, _configuration["DirectoryOfServices:BaseUrl"]);
             else
             {
                 var endpointUrl = endpoint == "Live" ? _configuration["dos-live-endpoint"] : _configuration["dos-uat-endpoint"];
