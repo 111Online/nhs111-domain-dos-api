@@ -23,7 +23,7 @@ namespace NHS111.Domain.Dos.Api
         public PathWayServiceSoap Create(string endpoint)
         {
             PathWayServiceSoapClient client;
-            if (string.IsNullOrEmpty(endpoint))
+            if (string.IsNullOrEmpty(endpoint) || endpoint == "Unspecified")
                 client = new PathWayServiceSoapClient(PathWayServiceSoapClient.EndpointConfiguration.PathWayServiceSoap12, _configuration["DirectoryOfServices:BaseUrl"]);
             else
             {
