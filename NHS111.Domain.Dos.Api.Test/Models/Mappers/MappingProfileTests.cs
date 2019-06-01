@@ -29,71 +29,64 @@ namespace NHS111.Domain.Dos.Api.Test.Models.Mappers
         [Test]
         public void FromDosCheckCapacitySummaryRequestToCheckCapacitySummaryRequest_IsValid()
         {
-            var result = Mapper.Map<DosCheckCapacitySummaryRequest, CheckCapacitySummaryRequest>(GenerateDosCheckCapacitySummaryRequestObject());
-            Assert.AreEqual("123", result.c.caseId);
-            Assert.AreEqual("so302un", result.c.postcode);
-            Assert.AreEqual(33, result.c.age);
+            var dosCheckCapacitySummaryRequest = new DosCheckCapacitySummaryRequest("madeUpUser", "madeUpPassword",
+                new DosCase
+                {
+                    AgeFormat = AgeFormatType.Years
+                });
+            var result = Mapper.Map<DosCheckCapacitySummaryRequest, CheckCapacitySummaryRequest>(dosCheckCapacitySummaryRequest);
             Assert.AreEqual(DirectoryOfServices.AgeFormatType.Years, result.c.ageFormat);
-            Assert.AreEqual("111", result.c.caseRef);
-            Assert.AreEqual(1008, result.c.disposition);
-            Assert.AreEqual(GenderType.M, result.c.gender);
-            Assert.AreEqual("123545645", result.c.searchDateTime);
-            Assert.AreEqual(60, result.c.searchDistance);
-            Assert.AreEqual(1010, result.c.symptomDiscriminatorList[0]);
-            Assert.AreEqual(1000, result.c.symptomGroup);
-            Assert.AreEqual("madeUpUser", result.userInfo.username);
-            Assert.AreEqual("madeUpPassword", result.userInfo.password);
-            Assert.AreEqual("1.5", result.serviceVersion);
         }
 
         [Test]
         public void FromDosServiceDetailsByIdRequestToServiceDetailsByIdRequest_IsValid()
         {
-            var result = Mapper.Map<DosServiceDetailsByIdRequest, ServiceDetailsByIdRequest>(GenerateDosServiceDetailsByIdRequestObject());
-            Assert.AreEqual("1234567890", result.serviceId);
-            Assert.AreEqual("madeUpUser", result.userInfo.username);
-            Assert.AreEqual("madeUpPassword", result.userInfo.password);
-            Assert.AreEqual("1.5", result.serviceVersion);
+            var dosServiceDetailsByIdRequest = new DosServiceDetailsByIdRequest("madeUpUser", "madeUpPassword", "1234567890");
+            var result = Mapper.Map<DosServiceDetailsByIdRequest, ServiceDetailsByIdRequest>(dosServiceDetailsByIdRequest);
+            Assert.IsNotNull(result);
         }
 
         [Test]
-        public void FromCheckCapacitySummaryResponseToDoSCheckCapacitySummaryResponse_IsValid()
+        public void FromCheckCapacitySummaryResponseToDosCheckCapacitySummaryResponse_IsValid()
         {
-            var checkCapacitySummaryResponse = new CheckCapacitySummaryResponse("1234", "2019-05-29T15:38:36", "2019-05-29T15:38:36", 8035.5f, 30, DistanceSource.National, new ServiceCareSummaryDestination[] { new ServiceCareSummaryDestination() { publicFacingInformation = "some referral text", referralInformation = "some notes about this service" },  });
+            var checkCapacitySummaryResponse = new CheckCapacitySummaryResponse("1234", "2019-05-29T15:38:36",
+                "2019-05-29T15:38:36", 8035.5f, 30, DistanceSource.National,
+                new[]
+                {
+                    new ServiceCareSummaryDestination
+                    {
+                        publicFacingInformation = "some referral text",
+                        referralInformation = "some notes about this service"
+                    },
+                });
 
-            var result = Mapper.Map<CheckCapacitySummaryResponse, DoSCheckCapacitySummaryResponse>(checkCapacitySummaryResponse);
-            Assert.AreEqual(checkCapacitySummaryResponse.TransactionId, result.TransactionId);
-            Assert.AreEqual(checkCapacitySummaryResponse.CheckCapacitySummaryResult.First().referralInformation, result.CheckCapacitySummaryResult.First().Notes);
-            Assert.AreEqual(checkCapacitySummaryResponse.CheckCapacitySummaryResult.First().publicFacingInformation, result.CheckCapacitySummaryResult.First().ReferralText);
+            var result = Mapper.Map<CheckCapacitySummaryResponse, DosCheckCapacitySummaryResponse>(checkCapacitySummaryResponse);
+            var firstService = result.CheckCapacitySummaryResult.First();
+            Assert.IsNotNull(firstService);
+            Assert.AreEqual(checkCapacitySummaryResponse.CheckCapacitySummaryResult.First().referralInformation, firstService.Notes);
+            Assert.AreEqual(checkCapacitySummaryResponse.CheckCapacitySummaryResult.First().publicFacingInformation, firstService.ReferralText);
+            Assert.IsNotNull(firstService.RotaSessions);
         }
 
-        private CheckCapacitySummaryResponse GenerateCheckCapacitySummaryResponseObject()
+        [Test]
+        public void FromServiceDetailsByIdResponseToDosServiceDetailsByIdResponse_IsValid()
         {
-            throw new System.NotImplementedException();
-        }
-
-        private DosCheckCapacitySummaryRequest GenerateDosCheckCapacitySummaryRequestObject()
-        {
-            var dosCase = new DosCase
+            var serviceDetailsByIdResponse = new ServiceDetailsByIdResponse(new[]
             {
-                CaseId = "123",
-                PostCode = "so302un",
-                Age = "33",
-                AgeFormat = AgeFormatType.Years,
-                CaseRef = "111",
-                Disposition = 1008,
-                Gender = "M",
-                SearchDateTime = "123545645",
-                SearchDistance = 60,
-                SymptomDiscriminatorList = new[] { 1010 },
-                SymptomGroup = 1000
-            };
-            return new DosCheckCapacitySummaryRequest("madeUpUser", "madeUpPassword", dosCase);
-        }
+                new ServiceDetail
+                {
+                    id = "123455",
+                    odsCode = "UNK",
+                    serviceEndpoints = new[] { new Endpoint { address = "http://someaddress.com", endpointOrder = 1, transport = "itk" } }
+                },
+            });
 
-        private DosServiceDetailsByIdRequest GenerateDosServiceDetailsByIdRequestObject()
-        {
-            return new DosServiceDetailsByIdRequest("madeUpUser", "madeUpPassword", "1234567890");
+            var result = Mapper.Map<ServiceDetailsByIdResponse, DosServiceDetailsByIdResponse>(serviceDetailsByIdResponse);
+            Assert.IsNotNull(serviceDetailsByIdResponse.services[0]);
+            Assert.IsNotNull(serviceDetailsByIdResponse.services[0].serviceEndpoints[0]);
+            Assert.AreEqual(serviceDetailsByIdResponse.services[0].serviceEndpoints[0].address, result.Services[0].ContactDetails[0].Value);
+            Assert.AreEqual(serviceDetailsByIdResponse.services[0].serviceEndpoints[0].endpointOrder, result.Services[0].ContactDetails[0].Order);
+            Assert.AreEqual(ContactType.itk, result.Services[0].ContactDetails[0].Tag);
         }
     }
 }

@@ -2,6 +2,7 @@ using DirectoryOfServices;
 using Microsoft.Extensions.Configuration;
 using NHS111.Domain.Dos.Api.Functional.Test.RestTools;
 using NHS111.Domain.Dos.Api.Models.Request;
+using NHS111.Domain.Dos.Api.Models.Response;
 using NUnit.Framework;
 using RestSharp;
 
@@ -53,12 +54,9 @@ namespace NHS111.Domain.Dos.Api.Functional.Test
             var checkCapacitySummaryRequest = new DosCheckCapacitySummaryRequest(DosApiUsername, DosApiPassword, new DosCase { Age = "22", Gender = "F", PostCode = "HP21 8AL" });
             var request = new RestRequest(DomainDosSApiCheckCapacitySummaryUrl, Method.POST);
             request.AddJsonBody(checkCapacitySummaryRequest);
-            var result = await _restClient.ExecuteTaskAsync<CheckCapacitySummaryResponse>(request);
+            var result = await _restClient.ExecuteTaskAsync<DosCheckCapacitySummaryResponse>(request);
             Assert.IsTrue(result.IsSuccessful);
             SchemaValidation.AssertValidResponseSchema(result.Content, SchemaValidation.ResponseSchemaType.CheckCapacitySummary);
-
-            //var firstService = result.Data.CheckCapacitySummaryResult[0];
-            //AssertResponse(firstService);
         }
 
         [Test]
@@ -67,8 +65,7 @@ namespace NHS111.Domain.Dos.Api.Functional.Test
             var serviceDetailsByIdRequest = new DosServiceDetailsByIdRequest(DosApiUsername, DosApiPassword, "1315835856");
             var request = new RestRequest(DomainDosApiServiceDetailsByIdUrl, Method.POST);
             request.AddJsonBody(serviceDetailsByIdRequest);
-            var result = await _restClient.ExecuteTaskAsync<ServiceDetailsByIdResponse>(request);
-
+            var result = await _restClient.ExecuteTaskAsync<DosServiceDetailsByIdResponse>(request);
             Assert.IsTrue(result.IsSuccessful);
             SchemaValidation.AssertValidResponseSchema(result.Content, SchemaValidation.ResponseSchemaType.CheckServiceDetailsById);
         }

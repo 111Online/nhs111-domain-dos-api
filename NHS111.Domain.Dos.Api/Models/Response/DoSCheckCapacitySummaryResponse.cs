@@ -2,7 +2,7 @@
 
 namespace NHS111.Domain.Dos.Api.Models.Response
 {
-    public class DoSCheckCapacitySummaryResponse
+    public class DosCheckCapacitySummaryResponse
     {
         public string TransactionId { get; set; }
         public string RequestedAtDateTime { get; set; }
