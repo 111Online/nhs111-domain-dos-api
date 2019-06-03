@@ -28,14 +28,13 @@ namespace NHS111.Domain.Dos.Api.Functional.Test
 
         private static void AssertValidCheckCapacitySummaryResponseSchema(string result)
         {
-            Assert.IsTrue(result.Contains("\"serviceType\"{\"id"));
-            Assert.IsTrue(result.Contains("\"serviceType\"{\"name"));
+            Assert.IsTrue(result.Contains("\"serviceTypeField\":{\"id"));
             Assert.IsTrue(result.Contains("\"id"));
             Assert.IsTrue(result.Contains("\"capacity"));
             Assert.IsTrue(result.Contains("\"name"));
             Assert.IsTrue(result.Contains("\"contactDetails"));
             Assert.IsTrue(result.Contains("\"address"));
-            Assert.IsTrue(result.Contains("\"postCode"));
+            Assert.IsTrue(result.Contains("\"postcode"));
             Assert.IsTrue(result.Contains("\"northings"));
             Assert.IsTrue(result.Contains("\"eastings"));
             Assert.IsTrue(result.Contains("\"url"));
