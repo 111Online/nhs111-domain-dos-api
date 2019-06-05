@@ -33,7 +33,7 @@ namespace NHS111.Domain.Dos.Api.Models.Mappers
             CreateMap<ServiceDetail, ServiceDetails>()
                 .ForMember(dest => dest.ContactDetails, opt => opt.MapFrom(src => src.serviceEndpoints));
             CreateMap<Endpoint, ContactDetails>()
-                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.address))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => $"{src.address}\\|{src.interaction}\\|{src.format}\\|{src.businessScenario}\\|{src.comment}\\|{src.compression}"))
                 .ForMember(dest => dest.Order, opt => opt.MapFrom(src => src.endpointOrder))
                 .ForMember(dest => dest.Tag, opt => opt.MapFrom(src => src.transport))
                 .ForMember(dest => dest.Name, opt => opt.Ignore());
