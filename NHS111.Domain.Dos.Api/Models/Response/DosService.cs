@@ -226,7 +226,7 @@ namespace NHS111.Domain.Dos.Api.Models.Response
                 ; if (!IsDateInList(date, nextWeeksDates))
                     continue;
 
-                var dayOfWeek = Mapper.Map<DayOfWeek>(date.DayOfWeek);
+                var dayOfWeek = date.DayOfWeek.ToResponseDayOfWeek();
 
                 short startTimeHours;
                 short startTimeMinutes;
@@ -373,5 +373,13 @@ namespace NHS111.Domain.Dos.Api.Models.Response
         public TimeSpan OpeningTime { get; set; }
         public TimeSpan ClosingTime { get; set; }
         public DayOfWeek Day { get; set; }
+    }
+
+    public static class DayOfWeekExtensions
+    {
+        public static DayOfWeek ToResponseDayOfWeek(this System.DayOfWeek value)
+        {
+            return (DayOfWeek)(int)value;
+        }
     }
 }
