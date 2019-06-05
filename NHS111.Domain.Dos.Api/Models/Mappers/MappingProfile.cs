@@ -59,12 +59,4 @@ namespace NHS111.Domain.Dos.Api.Models.Mappers
             }
         }
     }
-
-    public class FromEndpointToValueConvertor : IValueConverter<Endpoint, string>
-    {
-        public string Convert(Endpoint sourceMember, ResolutionContext context)
-        {
-            return $"{sourceMember.address}";
-        }
-    }
 }
