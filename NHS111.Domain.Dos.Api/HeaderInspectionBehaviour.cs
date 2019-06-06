@@ -22,6 +22,12 @@ namespace NHS111.Domain.Dos.Api
     public class HeaderInspector : IClientMessageInspector
     {
         public void AfterReceiveReply(ref Message reply, object correlationState){
+            if (reply.IsFault)
+            {
+                //https://stackoverflow.com/questions/27235601/capturing-soap-faults-and-handling-exceptions
+                var fault = new FaultException();
+                throw new FaultException();
+            }
         }
 
         public object BeforeSendRequest(ref Message request, IClientChannel channel)
