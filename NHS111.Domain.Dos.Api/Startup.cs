@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using NHS111.Domain.Dos.Api.Models.Mappers;
 using NHS111.Domain.Dos.Api.Services;
 
@@ -30,9 +31,14 @@ namespace NHS111.Domain.Dos.Api
             services.AddSingleton(mapper);
             services.AddSingleton<IPathwayServiceSoapFactory>(new PathwayServiceSoapFactory(Configuration));
             services.AddSingleton<IMonitorService>(new MonitorService(new PathwayServiceSoapFactory(Configuration), Configuration));
+            services.AddScoped<ApiExceptionFilter>();
 
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddLogging(log =>
+                log.AddLog4Net(Configuration.GetValue<string>("Logging:Log4NetConfigFile:Name"))
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
