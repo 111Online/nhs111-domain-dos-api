@@ -8,6 +8,7 @@ using NHS111.Domain.Dos.Api.Services;
 
 namespace NHS111.Domain.Dos.Api.Controllers
 {
+    [ServiceFilter(typeof(ApiExceptionFilter))]
     [Route("api/[controller]")]
     [ApiController]
     public class MonitorController : ControllerBase
