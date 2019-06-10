@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NHS111.Domain.Dos.Api.Models.Mappers;
+using NHS111.Domain.Dos.Api.Mappers;
 using NHS111.Domain.Dos.Api.Services;
 
 namespace NHS111.Domain.Dos.Api

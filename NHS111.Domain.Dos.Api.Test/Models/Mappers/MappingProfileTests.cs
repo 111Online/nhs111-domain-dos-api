@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using AutoMapper;
 using DirectoryOfServices;
-using NHS111.Domain.Dos.Api.Models.Mappers;
+using NHS111.Domain.Dos.Api.Mappers;
 using NHS111.Domain.Dos.Api.Models.Request;
 using NHS111.Domain.Dos.Api.Models.Response;
 using NUnit.Framework;

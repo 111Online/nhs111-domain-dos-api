@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using Newtonsoft.Json;
 
 namespace NHS111.Domain.Dos.Api.Models.Response
