@@ -4,11 +4,8 @@ using DirectoryOfServices;
 using NHS111.Domain.Dos.Api.Models.Request;
 using NHS111.Domain.Dos.Api.Models.Response;
 using AgeFormatType = NHS111.Domain.Dos.Api.Models.Request.AgeFormatType;
-using ServiceCareItemRotaSession = NHS111.Domain.Dos.Api.Models.Response.ServiceCareItemRotaSession;
-using TimeOfDay = NHS111.Domain.Dos.Api.Models.Response.TimeOfDay;
-using ServiceType = NHS111.Domain.Dos.Api.Models.Response.ServiceType;
 
-namespace NHS111.Domain.Dos.Api.Models.Mappers
+namespace NHS111.Domain.Dos.Api.Mappers
 {
     public class MappingProfile : Profile
     {
