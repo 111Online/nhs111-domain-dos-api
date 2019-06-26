@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using AutoMapper;
 using DirectoryOfServices;
-using NHS111.Domain.Dos.Api.Models.Mappers;
+using NHS111.Domain.Dos.Api.Mappers;
 using NHS111.Domain.Dos.Api.Models.Request;
 using NHS111.Domain.Dos.Api.Models.Response;
 using NUnit.Framework;
@@ -77,14 +77,22 @@ namespace NHS111.Domain.Dos.Api.Test.Models.Mappers
                 {
                     id = "123455",
                     odsCode = "UNK",
-                    serviceEndpoints = new[] { new Endpoint { address = "http://someaddress.com", endpointOrder = 1, transport = "itk" } }
+                    serviceEndpoints = new[] { new Endpoint { address = "http://someaddress.com", endpointOrder = 1, transport = "itk", businessScenario = "Primary", interaction = "primaryOutofHourRecipientNHS111CDADocument - v2 - 0", format = "CDA", compression = "uncompressed", comment="Test comment"} }
                 },
             });
 
             var result = Mapper.Map<ServiceDetailsByIdResponse, DosServiceDetailsByIdResponse>(serviceDetailsByIdResponse);
             Assert.IsNotNull(serviceDetailsByIdResponse.services[0]);
             Assert.IsNotNull(serviceDetailsByIdResponse.services[0].serviceEndpoints[0]);
-            Assert.AreEqual(serviceDetailsByIdResponse.services[0].serviceEndpoints[0].address, result.Services[0].ContactDetails[0].Value);
+            var contactDetailsField = string.Format("{0}\\|{1}\\|{2}\\|{3}\\|{4}\\|{5}",
+                serviceDetailsByIdResponse.services[0].serviceEndpoints[0].address,
+                serviceDetailsByIdResponse.services[0].serviceEndpoints[0].interaction,
+                serviceDetailsByIdResponse.services[0].serviceEndpoints[0].format,
+                serviceDetailsByIdResponse.services[0].serviceEndpoints[0].businessScenario,
+                serviceDetailsByIdResponse.services[0].serviceEndpoints[0].comment,
+                serviceDetailsByIdResponse.services[0].serviceEndpoints[0].compression
+                );
+            Assert.AreEqual(contactDetailsField, result.Services[0].ContactDetails[0].Value);
             Assert.AreEqual(serviceDetailsByIdResponse.services[0].serviceEndpoints[0].endpointOrder, result.Services[0].ContactDetails[0].Order);
             Assert.AreEqual(ContactType.itk, result.Services[0].ContactDetails[0].Tag);
         }
