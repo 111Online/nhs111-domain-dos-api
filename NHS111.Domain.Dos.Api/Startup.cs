@@ -53,7 +53,6 @@ namespace NHS111.Domain.Dos.Api
                 app.UseHsts();
             }
 
-
             app.UseHttpsRedirection();
             app.UseMvc();
         }
