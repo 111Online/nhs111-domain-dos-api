@@ -55,12 +55,6 @@ namespace NHS111.Domain.Dos.Api
                 app.UseHsts();
             }
 
-            using (StreamReader iisUrlRewriteStreamReader = File.OpenText("wwwroot/web.config"))
-            {
-                var options = new RewriteOptions().AddIISUrlRewrite(iisUrlRewriteStreamReader);
-                app.UseRewriter(options);
-            }
-
             app.UseHttpsRedirection();
             app.UseMvc();
         }
