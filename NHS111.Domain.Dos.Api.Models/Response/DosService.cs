@@ -56,6 +56,9 @@ namespace NHS111.Domain.Dos.Api.Models.Response
         [JsonProperty(PropertyName = "urlField")]
         public string Url { get; set; }
 
+        [JsonProperty(PropertyName = "serviceEndpoints")]
+        public ServiceEndpoint[] ServiceEndpoints { get; set; }
+
         [JsonProperty(PropertyName = "serviceTypeField")]
         public ServiceType ServiceType { get; set; }
 

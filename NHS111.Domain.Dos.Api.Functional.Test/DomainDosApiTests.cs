@@ -1,8 +1,12 @@
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
+using AutoMapper;
 using DirectoryOfServices;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using NHS111.Domain.Dos.Api.Functional.Test.RestTools;
+using NHS111.Domain.Dos.Api.Mappers;
 using NHS111.Domain.Dos.Api.Models.Request;
 using NHS111.Domain.Dos.Api.Models.Response;
 using NUnit.Framework;
@@ -12,65 +16,49 @@ namespace NHS111.Domain.Dos.Api.Functional.Test
 {
     public class DomainDosApiTests
     {
-        private IRestClient _restClient;
-        private IConfiguration _config;
+        private string CheckCapacitySummaryResponse => ReadJsonFile("NHS111.Domain.Dos.Api.Functional.Test.Json.CheckCapacitySummaryResponse.json");
+        private string DosCheckCapacitySummaryResponse => ReadJsonFile("NHS111.Domain.Dos.Api.Functional.Test.Json.DosCheckCapacitySummaryResponse.json");
+        private string DosServiceDetailsByIdResponse => ReadJsonFile("NHS111.Domain.Dos.Api.Functional.Test.Json.DosServiceDetailsByIdResponse.json");
+        private string ServiceDetailsByIdResponse => ReadJsonFile("NHS111.Domain.Dos.Api.Functional.Test.Json.ServiceDetailsByIdResponse.json");
 
-        public DomainDosApiTests()
+        [Test]
+        public void test_check_capacity_summary_response_mapper()
         {
-            _config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .AddJsonFile("C:\\Configurations\\nhs111-shared-resources\\appsettings.debug.json", optional: true)
-                .Build();
-        }
+            var checkCapacitySummaryResponse = JsonConvert.DeserializeObject<CheckCapacitySummaryResponse>(CheckCapacitySummaryResponse);
+            var mapper = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            }).CreateMapper();
 
-        private string DosApiUsername
-        {
-            get { return _config["DosCredentialUser"]; }
-        }
-
-        private string DosApiPassword
-        {
-            get { return _config["DosCredentialPassword"]; }
-        }
-
-        private string DomainDosSApiCheckCapacitySummaryUrl
-        {
-            get { return _config["DomainDosApiCheckCapacitySummaryUrl"]; }
-        }
-
-        private string DomainDosApiServiceDetailsByIdUrl
-        {
-            get { return _config["DomainDosApiServiceDetailsByIdUrl"]; }
-        }
-
-        [SetUp]
-        public void SetUp()
-        {
-            _restClient = new RestClient(_config["DomainDosApiBaseUrl"]);
-            _restClient.AddHandler("application/json", () => NewtonsoftJsonSerializer.Default);
+            var dosCheckCapacitySummaryResponse = mapper.Map<DosCheckCapacitySummaryResponse>(checkCapacitySummaryResponse);
+            var jsonDosCheckCapacitySummaryResponse = JsonConvert.SerializeObject(dosCheckCapacitySummaryResponse);
+            Assert.AreEqual(jsonDosCheckCapacitySummaryResponse, DosCheckCapacitySummaryResponse);
         }
 
         [Test]
-        public async Task TestCheckCapacitySumary()
+        public void test_service_details_by_id_mapper()
         {
-            var checkCapacitySummaryRequest = new DosCheckCapacitySummaryRequest(DosApiUsername, DosApiPassword, new DosCase { Age = "22", Gender = "F", PostCode = "HP21 8AL", Disposition = 1032, SymptomGroup = 1206, SymptomDiscriminatorList = new [] { 4193 }});
-            var json = JsonConvert.SerializeObject(checkCapacitySummaryRequest);
-            var request = new RestRequest(DomainDosSApiCheckCapacitySummaryUrl, Method.POST);
-            request.AddJsonBody(json);
-            var result = await _restClient.ExecuteTaskAsync<DosCheckCapacitySummaryResponse>(request);
-            Assert.IsTrue(result.IsSuccessful);
-            SchemaValidation.AssertValidResponseSchema(result.Content, SchemaValidation.ResponseSchemaType.CheckCapacitySummary);
+            var serviceDetailsByIdResponse = JsonConvert.DeserializeObject<ServiceDetailsByIdResponse>(ServiceDetailsByIdResponse);
+            var mapper = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            }).CreateMapper();
+
+            var dosServiceDetailsByIdResponse = mapper.Map<DosServiceDetailsByIdResponse>(serviceDetailsByIdResponse);
+            var jsonDosServiceDetailsByIdResponse = JsonConvert.SerializeObject(dosServiceDetailsByIdResponse);
+            Assert.AreEqual(jsonDosServiceDetailsByIdResponse, DosServiceDetailsByIdResponse);
         }
 
-        [Test]
-        public async Task TestCheckServiceDetailsById()
+
+        private string ReadJsonFile(string resourceName)
         {
-            var serviceDetailsByIdRequest = new DosServiceDetailsByIdRequest(DosApiUsername, DosApiPassword, "1315835856");
-            var request = new RestRequest(DomainDosApiServiceDetailsByIdUrl, Method.POST);
-            request.AddJsonBody(serviceDetailsByIdRequest);
-            var result = await _restClient.ExecuteTaskAsync<DosServiceDetailsByIdResponse>(request);
-            Assert.IsTrue(result.IsSuccessful);
-            SchemaValidation.AssertValidResponseSchema(result.Content, SchemaValidation.ResponseSchemaType.CheckServiceDetailsById);
+            var assembly = Assembly.GetExecutingAssembly();
+
+            using (var stream = assembly.GetManifestResourceStream(resourceName))
+            using (var reader = new StreamReader(stream))
+            {
+                return reader.ReadToEnd().Replace("\r\n", "").Replace(" ", "");
+            }
         }
     }
 }

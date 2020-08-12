@@ -1,0 +1,803 @@
+{
+  "TransactionId": "67641B6A-6A5F-6AD3-CF64-1557A732E1CF",
+  "RequestedAtDateTime": "2020-07-27T13:49:01",
+  "SearchDateTime": "2020-07-27T13:49:01",
+  "CheckCapacitySummaryResult": [
+    {
+      "idField": 2000037448,
+      "nameField": "Pharm+: Leeds, West Yorkshire (Living Care Pharmacy, Alwoodley Medical Centre)",
+      "publicNameField": "Living Care Pharmacy, Alwoodley Medical Centre, Leeds",
+      "postcodeField": "LS17 7NZ",
+      "odsCodeField": "FQW63RPX",
+      "capacityField": 0,
+      "contactDetailsField": "0113 2685602",
+      "addressField": "THE AVENUE, ALWOODLEY, LEEDS, LS17 7NZ",
+      "northingsField": 440405,
+      "eastingsField": 429354,
+      "urlField": "www.livingcarepharmacy.co.uk",
+      "serviceEndpoints": [
+        {
+          "addressField": "andria.turner@nhs.net",
+          "businessScenarioField": "Primary",
+          "commentField": "",
+          "compressionField": "uncompressed",
+          "endpointOrderField": 1,
+          "formatField": "CDA",
+          "interactionField": "urn:nhs-itk:interaction:primaryOutofHourRecipientNHS111CDADocument-v2-0",
+          "transportField": 3
+        }
+      ],
+      "serviceTypeField": {
+        "idField": 13,
+        "nameField": "Pharmacy"
+      },
+      "nonPublicTelephoneNo": "",
+      "fax": "0113 2888404",
+      "referralTextField": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distanceField": "0.0",
+      "notesField": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHoursField": false,
+      "rotaSessionsField": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 6,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 6,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 0,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 0,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        }
+      ],
+      "RotaSessionsAndSpecifiedSessions": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 6,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 6,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 0,
+          "startTimeField": {
+            "hoursField": 0,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 0,
+          "endTimeField": {
+            "hoursField": 23,
+            "minutesField": 59
+          },
+          "statusField": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessionsField": [
+      ],
+      "IsOpen": true,
+      "IsOpenForSpecifiedTimes": false
+    },
+    {
+      "idField": 2000038188,
+      "nameField": "Pharm+: Leeds, West Yorkshire (Lloyds Pharmacy, Moor Allerton)",
+      "publicNameField": "Lloyds Pharmacy, Moor Allerton",
+      "postcodeField": "LS17 5NY",
+      "odsCodeField": "FRD71RPX",
+      "capacityField": 0,
+      "contactDetailsField": "0113 2688488",
+      "addressField": "Sainsburys Store, Moor Allerton Centre, Kings Lane, Moortown, LS17 5NY",
+      "northingsField": 438836,
+      "eastingsField": 429646,
+      "urlField": "",
+      "serviceEndpoints": [
+      ],
+      "serviceTypeField": {
+        "idField": 13,
+        "nameField": "Pharmacy"
+      },
+      "nonPublicTelephoneNo": "",
+      "fax": "",
+      "referralTextField": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distanceField": "1.0",
+      "notesField": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHoursField": false,
+      "rotaSessionsField": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 6,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 6,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 0,
+          "startTimeField": {
+            "hoursField": 10,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 0,
+          "endTimeField": {
+            "hoursField": 16,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        }
+      ],
+      "RotaSessionsAndSpecifiedSessions": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 6,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 6,
+          "endTimeField": {
+            "hoursField": 20,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 0,
+          "startTimeField": {
+            "hoursField": 10,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 0,
+          "endTimeField": {
+            "hoursField": 16,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessionsField": [
+        "08-05-2020-09:00-17:00",
+        "25-05-2020-09:00-17:00"
+      ],
+      "IsOpen": true,
+      "IsOpenForSpecifiedTimes": false
+    },
+    {
+      "idField": 2000037379,
+      "nameField": "Pharm+: Leeds, West Yorkshire (Living Care Pharmacy, 311 Dewsbury Road)",
+      "publicNameField": "Living Care Pharmacy, Dewsbury Road, Leeds",
+      "postcodeField": "LS11 5LQ",
+      "odsCodeField": "FXC14RPX",
+      "capacityField": 0,
+      "contactDetailsField": "0113 2705696",
+      "addressField": "311 Dewsbury Road, Leeds, LS11 5LQ",
+      "northingsField": 430645,
+      "eastingsField": 429840,
+      "urlField": "https://www.livingcarepharmacy.co.uk",
+      "serviceEndpoints": [
+      ],
+      "serviceTypeField": {
+        "idField": 14,
+        "nameField": "Optician"
+      },
+      "nonPublicTelephoneNo": "",
+      "fax": "0113 2704430",
+      "referralTextField": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distanceField": "6.1",
+      "notesField": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHoursField": false,
+      "rotaSessionsField": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        }
+      ],
+      "RotaSessionsAndSpecifiedSessions": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 18,
+            "minutesField": 0
+          },
+          "statusField": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessionsField": [
+      ],
+      "IsOpen": true,
+      "IsOpenForSpecifiedTimes": false
+    },
+    {
+      "idField": 2000034365,
+      "nameField": "Pharm+: Keighley, West Yorkshire (Superdrug Pharmacy, Low Street)",
+      "publicNameField": "Superdrug Pharmacy, Low Street",
+      "postcodeField": "BD21 3PP",
+      "odsCodeField": "FX712RPX",
+      "capacityField": 0,
+      "contactDetailsField": "01535 607414",
+      "addressField": "35 - 39 Low Street, Keighley, BD21 3PP",
+      "northingsField": 441107,
+      "eastingsField": 406180,
+      "urlField": "www.superdrug.com",
+      "serviceEndpoints": [
+      ],
+      "serviceTypeField": {
+        "idField": 137,
+        "nameField": "Pharmacy Clinical Assessment Service (CAS)"
+      },
+      "nonPublicTelephoneNo": "",
+      "fax": "01535 607414",
+      "referralTextField": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distanceField": "14.4",
+      "notesField": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHoursField": false,
+      "rotaSessionsField": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 6,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 6,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        }
+      ],
+      "RotaSessionsAndSpecifiedSessions": [
+        {
+          "startDayOfWeekField": 1,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 1,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 2,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 2,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 3,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 3,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 4,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 4,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 5,
+          "startTimeField": {
+            "hoursField": 8,
+            "minutesField": 30
+          },
+          "endDayOfWeekField": 5,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        },
+        {
+          "startDayOfWeekField": 6,
+          "startTimeField": {
+            "hoursField": 9,
+            "minutesField": 0
+          },
+          "endDayOfWeekField": 6,
+          "endTimeField": {
+            "hoursField": 17,
+            "minutesField": 30
+          },
+          "statusField": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessionsField": [
+        "10-04-2020-09:00-17:30",
+        "13-04-2020-14:00-17:00"
+      ],
+      "IsOpen": true,
+      "IsOpenForSpecifiedTimes": false
+    }
+  ]
+}

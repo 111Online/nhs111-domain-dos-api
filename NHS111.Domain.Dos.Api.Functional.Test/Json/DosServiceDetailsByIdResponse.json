@@ -1,0 +1,28 @@
+{
+  "services": [
+    {
+      "idField": 2000037448,
+      "odsCodeField": "FQW63RPX",
+      "contactDetailsField": [
+        {
+          "tagField": 3,
+          "nameField": null,
+          "valueField": "andria.turner@nhs.net\\|urn:nhs-itk:interaction:primaryOutofHourRecipientNHS111CDADocument-v2-0\\|CDA\\|Primary\\|\\|uncompressed",
+          "orderField": 1
+        }
+      ],
+      "serviceEndpoints": [
+        {
+          "addressField": "andria.turner@nhs.net",
+          "businessScenarioField": "Primary",
+          "commentField": "",
+          "compressionField": "uncompressed",
+          "endpointOrderField": 1,
+          "formatField": "CDA",
+          "interactionField": "urn:nhs-itk:interaction:primaryOutofHourRecipientNHS111CDADocument-v2-0",
+          "transportField": 3
+        }
+      ]
+    }
+  ]
+}

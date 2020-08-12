@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using NHS111.Domain.Dos.Api.Models.Enums;
 
 namespace NHS111.Domain.Dos.Api.Models.Response
 {
@@ -17,12 +18,4 @@ namespace NHS111.Domain.Dos.Api.Models.Response
         public int Order { get; set; }
     }
 
-    public enum ContactType
-    {
-        dts,
-        itk,
-        telno,
-        email,
-        faxno,
-    }
 }
