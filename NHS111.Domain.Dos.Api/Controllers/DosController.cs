@@ -3,8 +3,10 @@ using AutoMapper;
 using DirectoryOfServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using NHS111.Domain.Dos.Api.Models.Request;
 using NHS111.Domain.Dos.Api.Models.Response;
+using Remotion.Linq.Clauses;
 
 namespace NHS111.Domain.Dos.Api.Controllers
 {
@@ -39,6 +41,8 @@ namespace NHS111.Domain.Dos.Api.Controllers
             var client = _pathWayServiceFactory.Create();
             var serviceDetailsByIdRequest = _mapper.Map<ServiceDetailsByIdRequest>(dosRequest);
             var serviceDetailsByIdResponse = await client.ServiceDetailsByIdAsync(serviceDetailsByIdRequest);
+            var jsonserviceDetailsByIdResponse = JsonConvert.SerializeObject(serviceDetailsByIdResponse);
+            var jsonDosServiceDetailsByIdResponse = JsonConvert.SerializeObject(_mapper.Map<DosServiceDetailsByIdResponse>(serviceDetailsByIdResponse));
             return _mapper.Map<DosServiceDetailsByIdResponse>(serviceDetailsByIdResponse);
         }
     }

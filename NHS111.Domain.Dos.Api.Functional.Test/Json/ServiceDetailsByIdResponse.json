@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "id": "2000037448",
+      "odsCode": "FQW63RPX",
+      "serviceEndpoints": [
+        {
+          "endpointOrder": 1,
+          "transport": "email",
+          "format": "CDA",
+          "interaction": "urn:nhs-itk:interaction:primaryOutofHourRecipientNHS111CDADocument-v2-0",
+          "businessScenario": "Primary",
+          "address": "andria.turner@nhs.net",
+          "compression": "uncompressed",
+          "comment": ""
+        }
+      ]
+    }
+  ]
+}

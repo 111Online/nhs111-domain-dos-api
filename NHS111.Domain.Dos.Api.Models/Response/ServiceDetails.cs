@@ -12,5 +12,8 @@ namespace NHS111.Domain.Dos.Api.Models.Response
 
         [JsonProperty(PropertyName = "contactDetailsField")]
         public ContactDetails[] ContactDetails { get; set; }
+
+        [JsonProperty(PropertyName = "serviceEndpoints")]
+        public ServiceEndpoint[] ServiceEndpoints { get; set; }
     }
 }

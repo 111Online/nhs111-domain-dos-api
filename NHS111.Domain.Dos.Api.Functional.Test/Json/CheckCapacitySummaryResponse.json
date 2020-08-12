@@ -1,0 +1,494 @@
+{
+  "CheckCapacitySummaryResult": [
+    {
+      "id": 2000037448,
+      "capacity": 0,
+      "name": "Pharm+: Leeds, West Yorkshire (Living Care Pharmacy, Alwoodley Medical Centre)",
+      "publicName": "Living Care Pharmacy, Alwoodley Medical Centre, Leeds",
+      "contactDetails": "0113 2685602",
+      "address": "THE AVENUE, ALWOODLEY, LEEDS, LS17 7NZ",
+      "postcode": "LS17 7NZ",
+      "northings": 440405,
+      "northingsSpecified": true,
+      "eastings": 429354,
+      "eastingsSpecified": true,
+      "url": "www.livingcarepharmacy.co.uk",
+      "serviceType": {
+        "id": 13,
+        "name": "Pharmacy"
+      },
+      "odsCode": "FQW63RPX",
+      "nonPublicTelephoneNo": "",
+      "fax": "0113 2888404",
+      "publicFacingInformation": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distance": "0.0",
+      "referralInformation": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHours": false,
+      "capacityAttributes": null,
+      "serviceEndpoints": [
+        {
+          "endpointOrder": 1,
+          "transport": "email",
+          "format": "CDA",
+          "interaction": "urn:nhs-itk:interaction:primaryOutofHourRecipientNHS111CDADocument-v2-0",
+          "businessScenario": "Primary",
+          "address": "andria.turner@nhs.net",
+          "compression": "uncompressed",
+          "comment": ""
+        }
+      ],
+      "rotaSessions": [
+        {
+          "startDayOfWeek": 1,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 1,
+          "endTime": {
+            "hours": 23,
+            "minutes": 59
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 2,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 2,
+          "endTime": {
+            "hours": 23,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 3,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 3,
+          "endTime": {
+            "hours": 23,
+            "minutes": 59
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 4,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 4,
+          "endTime": {
+            "hours": 23,
+            "minutes": 59
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 5,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 5,
+          "endTime": {
+            "hours": 23,
+            "minutes": 59
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 6,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 6,
+          "endTime": {
+            "hours": 23,
+            "minutes": 59
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 0,
+          "startTime": {
+            "hours": 0,
+            "minutes": 0
+          },
+          "endDayOfWeek": 0,
+          "endTime": {
+            "hours": 23,
+            "minutes": 59
+          },
+          "status": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessions": [],
+      "attributes": [],
+      "serviceAgeRange": [
+        {
+          "daysFrom": 0.0,
+          "daysTo": 47481.5
+        }
+      ]
+    },
+    {
+      "id": 2000038188,
+      "capacity": 0,
+      "name": "Pharm+: Leeds, West Yorkshire (Lloyds Pharmacy, Moor Allerton)",
+      "publicName": "Lloyds Pharmacy, Moor Allerton",
+      "contactDetails": "0113 2688488",
+      "address": "Sainsburys Store, Moor Allerton Centre, Kings Lane, Moortown, LS17 5NY",
+      "postcode": "LS17 5NY",
+      "northings": 438836,
+      "northingsSpecified": true,
+      "eastings": 429646,
+      "eastingsSpecified": true,
+      "url": "",
+      "serviceType": {
+        "id": 13,
+        "name": "Pharmacy"
+      },
+      "odsCode": "FRD71RPX",
+      "nonPublicTelephoneNo": "",
+      "fax": "",
+      "publicFacingInformation": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distance": "1.0",
+      "referralInformation": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHours": false,
+      "capacityAttributes": null,
+      "serviceEndpoints": [],
+      "rotaSessions": [
+        {
+          "startDayOfWeek": 1,
+          "startTime": {
+            "hours": 8,
+            "minutes": 0
+          },
+          "endDayOfWeek": 1,
+          "endTime": {
+            "hours": 20,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 2,
+          "startTime": {
+            "hours": 8,
+            "minutes": 0
+          },
+          "endDayOfWeek": 2,
+          "endTime": {
+            "hours": 20,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 3,
+          "startTime": {
+            "hours": 8,
+            "minutes": 0
+          },
+          "endDayOfWeek": 3,
+          "endTime": {
+            "hours": 20,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 4,
+          "startTime": {
+            "hours": 8,
+            "minutes": 0
+          },
+          "endDayOfWeek": 4,
+          "endTime": {
+            "hours": 20,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 5,
+          "startTime": {
+            "hours": 8,
+            "minutes": 0
+          },
+          "endDayOfWeek": 5,
+          "endTime": {
+            "hours": 20,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 6,
+          "startTime": {
+            "hours": 8,
+            "minutes": 0
+          },
+          "endDayOfWeek": 6,
+          "endTime": {
+            "hours": 20,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 0,
+          "startTime": {
+            "hours": 10,
+            "minutes": 0
+          },
+          "endDayOfWeek": 0,
+          "endTime": {
+            "hours": 16,
+            "minutes": 0
+          },
+          "status": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessions": [ "08-05-2020-09:00-17:00", "25-05-2020-09:00-17:00" ],
+      "attributes": [],
+      "serviceAgeRange": [
+        {
+          "daysFrom": 0.0,
+          "daysTo": 47481.5
+        }
+      ]
+    },
+    {
+      "id": 2000037379,
+      "capacity": 0,
+      "name": "Pharm+: Leeds, West Yorkshire (Living Care Pharmacy, 311 Dewsbury Road)",
+      "publicName": "Living Care Pharmacy, Dewsbury Road, Leeds",
+      "contactDetails": "0113 2705696",
+      "address": "311 Dewsbury Road, Leeds, LS11 5LQ",
+      "postcode": "LS11 5LQ",
+      "northings": 430645,
+      "northingsSpecified": true,
+      "eastings": 429840,
+      "eastingsSpecified": true,
+      "url": "https://www.livingcarepharmacy.co.uk",
+      "serviceType": {
+        "id": 14,
+        "name": "Optician"
+      },
+      "odsCode": "FXC14RPX",
+      "nonPublicTelephoneNo": "",
+      "fax": "0113 2704430",
+      "publicFacingInformation": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distance": "6.1",
+      "referralInformation": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHours": false,
+      "capacityAttributes": null,
+      "serviceEndpoints": [],
+      "rotaSessions": [
+        {
+          "startDayOfWeek": 1,
+          "startTime": {
+            "hours": 9,
+            "minutes": 0
+          },
+          "endDayOfWeek": 1,
+          "endTime": {
+            "hours": 18,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 2,
+          "startTime": {
+            "hours": 9,
+            "minutes": 0
+          },
+          "endDayOfWeek": 2,
+          "endTime": {
+            "hours": 18,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 3,
+          "startTime": {
+            "hours": 9,
+            "minutes": 0
+          },
+          "endDayOfWeek": 3,
+          "endTime": {
+            "hours": 18,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 4,
+          "startTime": {
+            "hours": 9,
+            "minutes": 0
+          },
+          "endDayOfWeek": 4,
+          "endTime": {
+            "hours": 18,
+            "minutes": 0
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 5,
+          "startTime": {
+            "hours": 9,
+            "minutes": 0
+          },
+          "endDayOfWeek": 5,
+          "endTime": {
+            "hours": 18,
+            "minutes": 0
+          },
+          "status": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessions": [],
+      "attributes": [],
+      "serviceAgeRange": [
+        {
+          "daysFrom": 0.0,
+          "daysTo": 47481.5
+        }
+      ]
+    },
+    {
+      "id": 2000034365,
+      "capacity": 0,
+      "name": "Pharm+: Keighley, West Yorkshire (Superdrug Pharmacy, Low Street)",
+      "publicName": "Superdrug Pharmacy, Low Street",
+      "contactDetails": "01535 607414",
+      "address": "35 - 39 Low Street, Keighley, BD21 3PP",
+      "postcode": "BD21 3PP",
+      "northings": 441107,
+      "northingsSpecified": true,
+      "eastings": 406180,
+      "eastingsSpecified": true,
+      "url": "www.superdrug.com",
+      "serviceType": {
+        "id": 137,
+        "name": "Pharmacy Clinical Assessment Service (CAS)"
+      },
+      "odsCode": "FX712RPX",
+      "nonPublicTelephoneNo": "",
+      "fax": "01535 607414",
+      "publicFacingInformation": "You must telephone this service before attending. This service accepts electronic referrals. You should ring before you go there.",
+      "distance": "14.4",
+      "referralInformation": "Referral Information: ***This service is NOT suitable for cases of suspected Coronavirus (COVID-19).***\n\nFor periods of the day the pharmacy will only be available by telephone (which may include between opening hours if there is a break in the middle of the day) due to high demand and social distancing measures.\n\nThe patient should TELEPHONE THE PHARMACY for further assessment. The patient must inform the pharmacist they have been referred by NHS 111. The pharmacist may make contact by phone or text message.",
+      "openAllHours": false,
+      "capacityAttributes": null,
+      "serviceEndpoints": [],
+      "rotaSessions": [
+        {
+          "startDayOfWeek": 1,
+          "startTime": {
+            "hours": 8,
+            "minutes": 30
+          },
+          "endDayOfWeek": 1,
+          "endTime": {
+            "hours": 17,
+            "minutes": 30
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 2,
+          "startTime": {
+            "hours": 8,
+            "minutes": 30
+          },
+          "endDayOfWeek": 2,
+          "endTime": {
+            "hours": 17,
+            "minutes": 30
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 3,
+          "startTime": {
+            "hours": 8,
+            "minutes": 30
+          },
+          "endDayOfWeek": 3,
+          "endTime": {
+            "hours": 17,
+            "minutes": 30
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 4,
+          "startTime": {
+            "hours": 8,
+            "minutes": 30
+          },
+          "endDayOfWeek": 4,
+          "endTime": {
+            "hours": 17,
+            "minutes": 30
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 5,
+          "startTime": {
+            "hours": 8,
+            "minutes": 30
+          },
+          "endDayOfWeek": 5,
+          "endTime": {
+            "hours": 17,
+            "minutes": 30
+          },
+          "status": "Open"
+        },
+        {
+          "startDayOfWeek": 6,
+          "startTime": {
+            "hours": 9,
+            "minutes": 0
+          },
+          "endDayOfWeek": 6,
+          "endTime": {
+            "hours": 17,
+            "minutes": 30
+          },
+          "status": "Open"
+        }
+      ],
+      "openTimeSpecifiedSessions": [ "10-04-2020-09:00-17:30", "13-04-2020-14:00-17:00" ],
+      "attributes": [],
+      "serviceAgeRange": [
+        {
+          "daysFrom": 0.0,
+          "daysTo": 47481.5
+        }
+      ]
+    }
+  ],
+  "TransactionId": "67641B6A-6A5F-6AD3-CF64-1557A732E1CF",
+  "RequestedAtDateTime": "2020-07-27T13:49:01",
+  "SearchDateTime": "2020-07-27T13:49:01",
+  "CalculatedAgeInDays": 8035.5,
+  "SearchDistance": 30,
+  "SearchDistanceUsedSource": 1
+}
