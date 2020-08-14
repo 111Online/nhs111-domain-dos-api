@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-	<AssemblyVersion>5.3.0.*</AssemblyVersion>
-    <FileVersion>5.2.0.*</FileVersion>
+	<AssemblyVersion>5.4.0.*</AssemblyVersion>
+    <FileVersion>5.4.0.*</FileVersion>
 	<Deterministic>False</Deterministic>
-	<Version>5.3.0</Version>
+	<Version>5.4.0</Version>
 	<Company>NHS Digital</Company>
   </PropertyGroup>
 
