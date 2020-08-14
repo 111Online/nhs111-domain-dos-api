@@ -29,13 +29,7 @@ namespace NHS111.Domain.Dos.Api.Models.Response
         public string PublicName
         {
             get { return string.IsNullOrEmpty(_publicName) ? Name : _publicName; }
-            set { _publicName = value; }
-        }
-
-        [JsonProperty(PropertyName = "publicNameOnlyField")]
-        public string PublicNameOnly
-        {
-            get { return _publicName; }
+            set { _publicName = !string.IsNullOrEmpty(value) ? value : Name; }
         }
 
         [JsonProperty(PropertyName = "postcodeField")]
